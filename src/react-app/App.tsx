@@ -27,13 +27,13 @@ function App() {
           >
             <path
               d="M12 0V28"
-              stroke="#444"
+              stroke="#555"
               strokeWidth="2"
               strokeLinecap="round"
             />
             <path
               d="M5 21L12 28L19 21"
-              stroke="#444"
+              stroke="#555"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -43,10 +43,12 @@ function App() {
       )}
 
       {showLogo && (
-        <img
-          src="/src/react-app/assets/mecoapps.png"
-          alt="MecoApps Logo"
-          className="logo-animation"
+        <video
+          className="logo-video"
+          src="/mecoappsanimated.mp4"
+          autoPlay
+          playsInline
+          muted   /* 🔊 remove this line if you WANT sound */
         />
       )}
     </div>
