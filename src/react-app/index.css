@@ -1,3 +1,10 @@
+/* ===== Global Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* ===== Coming Soon Intro ===== */
 
 .intro-container {
@@ -5,10 +12,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f8f9fb; /* light gray-white */
+  background: #f8f9fb; /* light gray / white */
+  overflow: hidden;
 }
 
-/* Arrow animation */
+/* ===== Arrow Animation ===== */
+
 .arrow-wrapper {
   animation: arrowMove 1.2s ease-in-out infinite;
 }
@@ -32,19 +41,11 @@
   }
 }
 
-/* Logo fade-in */
-.logo-animation {
-  width: 260px;
-  animation: logoFadeIn 0.6s ease-out forwards;
-}
+/* ===== Animated Logo Video ===== */
 
-@keyframes logoFadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.96);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+.logo-video {
+  width: 280px;
+  max-width: 80vw;
+  height: auto;
+  display: block;
 }
