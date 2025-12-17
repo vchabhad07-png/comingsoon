@@ -8,7 +8,7 @@ function App() {
     const timer = setTimeout(() => {
       setShowArrow(false)
       setShowLogo(true)
-    }, 2200) // duration of arrow.gif
+    }, 2000) // arrow animation duration
 
     return () => clearTimeout(timer)
   }, [])
@@ -16,16 +16,35 @@ function App() {
   return (
     <div className="intro-container">
       {showArrow && (
-        <img
-          src="/arrow.gif"
-          alt="Arrow animation"
-          className="arrow-animation"
-        />
+        <div className="arrow-wrapper">
+          <svg
+            width="28"
+            height="48"
+            viewBox="0 0 24 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="arrow"
+          >
+            <path
+              d="M12 0V28"
+              stroke="#444"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+            <path
+              d="M5 21L12 28L19 21"
+              stroke="#444"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </div>
       )}
 
       {showLogo && (
         <img
-          src="/mecoapps.png"
+          src="/src/react-app/assets/mecoapps.png"
           alt="MecoApps Logo"
           className="logo-animation"
         />
